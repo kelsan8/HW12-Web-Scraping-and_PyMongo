@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Hot Finds</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      </head>
+
+      <body>
+        <div class="container">
+      
+          <div class="jumbotron text-center">
+            <h1>Scrape Mars Data</h1>
+            <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Find out about Mars!</a></p>
+          </div>
+      
+          <!-- Craigslist Listings -->
+          <div class="row">
+            <div class="col-lg-7">
+              <h4 class="heading">{{mars_data.title}}</h4>
+              <p>{{mars_data.snippet}}</p>
+            </div>
+          </div>
+          <div class="row">
+              <div class='col-lg-8'>
+                  <h4>Featured Mars Image</h4><br>
+                  <img src="{{mars_data.featured_img}}" alt="Featured Mars Image">
+              </div>
+              <div class='col-lg-4'>
+                <table border="1" class="dataframe">\n  <thead>\n    <tr style="text-align: right;">\n      <th></th>\n      <th>Value</th>\n    </tr>\n    <tr>\n      <th>Category</th>\n      <th></th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <th>Equatorial Diameter:</th>\n      <td>6,792 km</td>\n    </tr>\n    <tr>\n      <th>Polar Diameter:</th>\n      <td>6,752 km</td>\n    </tr>\n    <tr>\n      <th>Mass:</th>\n      <td>6.42 x 10^23 kg (10.7% Earth)</td>\n    </tr>\n    <tr>\n      <th>Moons:</th>\n      <td>2 (Phobos &amp; Deimos)</td>\n    </tr>\n    <tr>\n      <th>Orbit Distance:</th>\n      <td>227,943,824 km (1.52 AU)</td>\n    </tr>\n    <tr>\n      <th>Orbit Period:</th>\n      <td>687 days (1.9 years)</td>\n    </tr>\n    <tr>\n      <th>Surface Temperature:</th>\n      <td>-153 to 20 °C</td>\n    </tr>\n    <tr>\n      <th>First Record:</th>\n      <td>2nd millennium BC</td>\n    </tr>\n    <tr>\n      <th>Recorded By:</th>\n      <td>Egyptian astronomers</td>\n    </tr>\n  </tbody>\n</table>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-lg-6"><h5>{{mars_data.hemisphere_titles[0]}}</h5><br>
+                <img src="{{mars_data.hemisphere_img_urls[0]}}"></div>
+
+              <div class="col-lg-6"><h5>{{mars_data.hemisphere_titles[1]}}</h5><br>
+                <img src="{{mars_data.hemisphere_img_urls[1]}}"></div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6"><h5>{{mars_data.hemisphere_titles[2]}}</h5><br>
+              <img src="{{mars_data.hemisphere_img_urls[2]}}"></div>
+
+            <div class="col-lg-6"><h5>{{mars_data.hemisphere_titles[3]}}</h5><br>
+              <img src="{{mars_data.hemisphere_img_urls[3]}}"></div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <h4>Twitter News</h4><br>
+                <p>{{mars_data.weather_tweets}}</p>
+            </div>
+        </div>
+      
+        </div>
+      </body>
+
+</html>
